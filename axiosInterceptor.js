@@ -28,16 +28,6 @@ axiosInterceptor.interceptors.response.use(
           console.error('Resource not found');
           break;
         case 429:
-          Notifier.showNotification({
-            title: 'Request failed',
-            description: error.response?.data?.detail || null,
-            Component: NotifierComponents.Alert,
-            componentProps: {
-              alertType: 'error',
-            },
-          });
-
-
 
           Notifier.showNotification({
             title: 'Request failed',
